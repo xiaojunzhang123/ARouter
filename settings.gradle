@@ -1,0 +1,8 @@
+include ':base'
+include ':module2'
+include ':arouter-core'
+include ':module1'
+include ':arouter-compiler'
+include ':arouter-annotation'
+include ':app'
+rootProject.name = "ARouter"

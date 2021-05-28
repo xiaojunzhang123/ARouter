@@ -1,0 +1,26 @@
+ext {
+
+    // true集成模式 false 组件模式
+    isModule = true
+
+    android = [
+            compileSdkVersion:28,
+            minSdkVersion    :14,
+            targetSdkVersion :26,
+            versionCode      :1,
+            versionName      :"1.0"
+    ]
+
+    appId = [
+            "app":"com.zxj.arouter",
+            "module1":"com.zxj.module1",
+            "module2":"com.zxj.module2"
+    ]
+
+    supportLibrary = "28.1.0"
+
+    dependencies = [
+            "appcompat-v7":"com.android.support:appcompat-v7:${supportLibrary}"
+    ]
+
+}

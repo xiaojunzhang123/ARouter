@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    //google的用于编译时扫码工程下指定注解的库 rc2可以升级为 rc6
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
+    //javapoet 为squareup 公司为生成java的库
+    implementation 'com.squareup:javapoet:1.7.0'
+    implementation project(':arouter-annotation')
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
