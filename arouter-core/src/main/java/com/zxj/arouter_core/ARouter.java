@@ -123,12 +123,11 @@ public class ARouter {
                                 final int requestCode, final NavigationCallback callback) {
 
         if (callback != null) {
-            _navigation(context, postcard, requestCode, callback);
+          return   _navigation(context, postcard, requestCode, callback);
 
         } else {
-            _navigation(context, postcard, requestCode, callback);
+           return  _navigation(context, postcard, requestCode, callback);
         }
-        return null;
 
     }
 
@@ -186,7 +185,8 @@ public class ARouter {
 
                 break;
             case ISERVICE:
-                return postcard.getService();
+                IService service = postcard.getService();
+                return service;
             default:
                 break;
         }
