@@ -14,6 +14,7 @@ import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
 import androidx.core.app.ActivityCompat;
+import com.zxj.arouter_annotation.Extra;
 import com.zxj.arouter_annotation.RouteMeta;
 import com.zxj.arouter_core.callback.NavigationCallback;
 import com.zxj.arouter_core.exception.NoRouteFoundException;
@@ -241,7 +242,7 @@ public class ARouter {
     }
 
     public void inject(Activity activity) {
-
+        ExtraManager.getInstance().loadExtras(activity);
     }
 
 }

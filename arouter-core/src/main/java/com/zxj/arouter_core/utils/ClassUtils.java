@@ -24,6 +24,7 @@ import dalvik.system.DexFile;
 public class ClassUtils {
 
     private static final String TAG = "ARouter";
+
     /**
      * 获得程序所有的APK (instant run 会产生很多split apk)
      *
@@ -35,7 +36,8 @@ public class ClassUtils {
             context.getPackageName(), 0);
         List<String> sourcePaths = new ArrayList<>();
         sourcePaths.add(applicationInfo.sourceDir);
-        Log.d(TAG,"sourcePaths: "+ sourcePaths.toString() + " applicationInfo.sourceDir:"+applicationInfo.sourceDir);
+        Log.d(TAG, "sourcePaths: " + sourcePaths.toString() + " applicationInfo.sourceDir:"
+            + applicationInfo.sourceDir);
         // instant run
         if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
             if (null != applicationInfo.splitPublicSourceDirs) {
@@ -92,11 +94,9 @@ public class ClassUtils {
                         //释放一个
                         countDownLatch.countDown();
                     }
-
                 }
             });
         }
-
         //等待执行完成
         countDownLatch.await();
         return classNames;

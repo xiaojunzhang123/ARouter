@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startModule1MainActivity(View view) {
-
-
+        ARouter.getInstance().build("/module1/module1main").withString("msg","从MainActivity").navigation();
     }
 
     public void startModule2MainActivity(View view) {

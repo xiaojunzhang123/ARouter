@@ -214,6 +214,10 @@ public class PostCard extends RouteMeta {
         return optionsCompat;
     }
 
+    public Object navigation(){
+        return ARouter.getInstance().navigation(null,this,-1,null);
+    }
+
     public Object navigation(Context context, NavigationCallback callback){
         return  ARouter.getInstance().navigation(context,this,-1,callback);
     }
